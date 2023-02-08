@@ -17,6 +17,11 @@ client.on('messageCreate', async function(message){
         if (message.content == 'hi bot'){
             message.reply('Hi ' + message.author.username);
         }
+        if (message.content == 'bot pls img'){
+            //send image and say 'its your image'
+            message.reply('its your image');
+            message.channel.send({files: ['https://i.imgur.com/IPxnIgv.jpeg']});
+        }
         return;
     }
     catch(err){
